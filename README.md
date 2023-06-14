@@ -29,8 +29,10 @@ $ wget -O- -q https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo gp
 $ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/oracle_vbox_2016.gpg] http://download.virtualbox.org/virtualbox/debian bullseye contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
 $ sudo apt update
 $ sudo apt install virtualbox-7.0
-$ sudo apt-get install dkms build-essential linux-headers-`uname -r`
+$ sudo apt-get install dkms build-essential linux-headers-`uname -r` 
 $ sudo /sbin/vboxconfig
+$ sudo echo "* 10.0.0.0/8 172.16.0.0/16" >> /etc/vbox/networks.conf & echo "* 2001::/64" >> /etc/vbox/networks.conf
+$ virtualbox --version
 ```
 
 ### Cloning of this repository
