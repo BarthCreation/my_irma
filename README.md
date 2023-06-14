@@ -36,7 +36,22 @@ $ sudo apt install virtualbox-7.0
 user@xyz:~$ git clone https://github.com/BarthCreation/my_irma/
 ```
 
+### Installation of venv
+```console
+user@xyz:~$ sudo apt install virtualenv
+user@xyz:~$ virtualenv -p python2 venv
+user@xyz:~$ source venv/bin/activate
+```
 
+### Use of IRMA
+```console
+(venv) user@xyz:~$ cd my_irma/ansible
+(venv) user@xyz:~/my_irma/ansible$ pip install -r requirements.txt
+(venv) user@xyz:~/my_irma/ansible$ vagrant up
+(venv) user@xyz:~/my_irma/ansible$ python irma-ansible.py environments/allinone_prod.yml playbooks/provisioning.yml
+(venv) user@xyz:~/my_irma/ansible$ python irma-ansible.py environments/allinone_prod.yml playbooks/updating.yml
+(venv) user@xyz:~/my_irma/ansible$ python irma-ansible.py environments/allinone_prod.yml playbooks/deployment.yml
+```
 
 
 
