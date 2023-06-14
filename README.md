@@ -32,6 +32,12 @@ $ sudo apt install virtualbox-7.0
 ```
 
 ### Cloning of this repository
+```console
+user@xyz:~$ git clone https://github.com/BarthCreation/my_irma/
+```
+
+
+
 
 
 
