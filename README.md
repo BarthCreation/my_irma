@@ -7,7 +7,7 @@ My setup: A virtualized Debian 11
 Official IRMA's documentation: [irma.readthedocs](https://irma.readthedocs.io/en/latest/install/index.html)  
 
 ### Install Vagrant
-```bash
+```zsh
 $ wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
 $ echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
 $ sudo apt update && sudo apt install vagrant
