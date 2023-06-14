@@ -1,0 +1,33 @@
+---
+
+- block:
+  # RabbitMQ official install
+  # See: https://www.rabbitmq.com/install-debian.html
+  - name: Retrieve the official rabbitmq repository's key
+    apt_key:
+      keyserver: hkps.pool.sks-keyservers.net
+      id: 6B73A36E6026DFCA
+      state: present
+
+    # This is needed because repositories are using TLS
+  - apt:
+      name: apt-transport-https
+      state: present
+
+  - name: Add the official repository
+    apt_repository:
+      repo: "deb https://dl.bintray.com/rabbitmq/debian {{ ansible_distribution_release }} main erlang"
+      state: present
+      filename: "bintray.rabbitmq"
+      update_cache: yes
+  when: not rabbitmq_os_package
+
+- name: Install rabbitmq-server
+  apt:
+    name: rabbitmq-server
+    state: present
+
+- name: Enable rabbitmq-server to survive reboot
+  service:
+    name: rabbitmq-server
+    enabled: yes

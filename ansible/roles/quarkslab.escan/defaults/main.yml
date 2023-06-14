@@ -1,0 +1,8 @@
+---
+
+escan_version: "7.0.21"
+escan_download_url: "https://www.microworldsystems.com/download/linux/soho/deb/escan-antivirus-wks.amd64.deb"
+
+# TODO: automatically guess whether the target is amd64 or i586
+escan_url: "{{ escan_download_url }}"
+escan_temp_dir: "/tmp/escan"
