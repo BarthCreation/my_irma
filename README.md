@@ -49,6 +49,7 @@ user@xyz:~$ source venv/bin/activate
 ```console
 (venv) user@xyz:~$ cd my_irma/ansible
 (venv) user@xyz:~/my_irma/ansible$ pip install -r requirements.txt
+(venv) user@xyz:~/my_irma/ansible$ echo "* 10.0.0.0/8 172.16.0.0/16" >> /etc/vbox/networks.conf & echo "* 2001::/64" >> /etc/vbox/networks.conf
 (venv) user@xyz:~/my_irma/ansible$ vagrant up
 (venv) user@xyz:~/my_irma/ansible$ python irma-ansible.py environments/allinone_prod.yml playbooks/provisioning.yml
 (venv) user@xyz:~/my_irma/ansible$ python irma-ansible.py environments/allinone_prod.yml playbooks/updating.yml
