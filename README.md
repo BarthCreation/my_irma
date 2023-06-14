@@ -43,7 +43,7 @@ user@xyz:~$ virtualenv -p python2 venv
 user@xyz:~$ source venv/bin/activate
 ```
 
-### Use of IRMA
+### Installation of IRMA
 ```console
 (venv) user@xyz:~$ cd my_irma/ansible
 (venv) user@xyz:~/my_irma/ansible$ pip install -r requirements.txt
@@ -52,6 +52,10 @@ user@xyz:~$ source venv/bin/activate
 (venv) user@xyz:~/my_irma/ansible$ python irma-ansible.py environments/allinone_prod.yml playbooks/updating.yml
 (venv) user@xyz:~/my_irma/ansible$ python irma-ansible.py environments/allinone_prod.yml playbooks/deployment.yml
 ```
+
+### Use IRMA
+Go to https://172.16.1.30
+
 
 
 
