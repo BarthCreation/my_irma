@@ -43,7 +43,7 @@ user@xyz:~$ git clone https://github.com/BarthCreation/my_irma/
 ### Installation of venv
 ```console
 user@xyz:~$ sudo apt install virtualenv
-user@xyz:~$ virtualenv -p python venv
+user@xyz:~$ virtualenv -p python2 venv
 user@xyz:~$ source venv/bin/activate
 ```
 
