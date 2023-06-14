@@ -29,6 +29,8 @@ $ wget -O- -q https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo gp
 $ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/oracle_vbox_2016.gpg] http://download.virtualbox.org/virtualbox/debian bullseye contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
 $ sudo apt update
 $ sudo apt install virtualbox-7.0
+$ sudo apt-get install dkms build-essential linux-headers-`uname -r`
+$ sudo /sbin/vboxconfig
 ```
 
 ### Cloning of this repository
@@ -39,7 +41,7 @@ user@xyz:~$ git clone https://github.com/BarthCreation/my_irma/
 ### Installation of venv
 ```console
 user@xyz:~$ sudo apt install virtualenv
-user@xyz:~$ virtualenv -p python2 venv
+user@xyz:~$ virtualenv -p python venv
 user@xyz:~$ source venv/bin/activate
 ```
 
