@@ -1,7 +1,3 @@
-My_IRMA: The updated and functioning version of IRMA by BarthCreation 
----------------------------------------------------------------------
-
-
 IRMA: Incident Response & Malware Analysis
 ------------------------------------------
 
