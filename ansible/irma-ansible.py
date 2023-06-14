@@ -35,7 +35,7 @@ class IrmaConfig(object):
     def _read(self, filename):
         try:
             with open(filename) as f:
-                self.config = yaml.load(f.read())
+                self.config = yaml.full_load(f.read())
             self.filename = filename
             self._parse()
         except ValueError as e:
